@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:63097",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\Abrar\\source\\repos\\Portfolio\\Portfolio.Server\\..\\portfolio.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
