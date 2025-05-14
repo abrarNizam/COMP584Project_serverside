@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nKzku8d4Lq5aAZjd/h56MHszH8x0KlfMk4IOyWo9nT8=",
+  "Hash": "zEbti2LWfVLqYbKhGSPsxORQOLKs47FvO+KQA6Pg6Mg=",
   "Source": "Portfolio.Server",
   "BasePath": "_content/Portfolio.Server",
   "Mode": "Default",
@@ -12,10 +12,10 @@
       "Source": "portfolio.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
       "AdditionalPublishProperties": "",
-      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;Configuration;Platform;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
       "AdditionalBuildProperties": "",
-      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;Configuration;Platform;TargetFramework"
     }
   ],
   "DiscoveryPatterns": [],

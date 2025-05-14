@@ -77,6 +77,17 @@ namespace Portfolio.Server.Controllers
         [HttpPost]
         public async Task<ActionResult<Projects>> PostProjects(Projects projects)
         {
+            //_context.Projects.Add(projects);
+            //await _context.SaveChangesAsync();
+
+            //return CreatedAtAction("GetProjects", new { id = projects.ProjectId }, projects);
+
+            var userProfile = await _context.UserProfiles.FindAsync(projects.UserId);
+            if (userProfile == null)
+            {
+                return BadRequest("UserProfile does not exist.");
+            }
+
             _context.Projects.Add(projects);
             await _context.SaveChangesAsync();
 
