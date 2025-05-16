@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 
 namespace Portfolio.Server.Models
@@ -21,6 +22,7 @@ namespace Portfolio.Server.Models
 
         [ForeignKey("UserId")]
         [InverseProperty("Projects")] // Points to the Projects property in UserProfile
-        public virtual UserProfiles UserProfile { get; set; } // Removed nullable marker
+        [JsonIgnore]
+        public virtual UserProfiles? UserProfile { get; set; } 
     }
 }

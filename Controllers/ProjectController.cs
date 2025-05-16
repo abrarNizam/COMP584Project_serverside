@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using Portfolio.Server.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Portfolio.Server.Controllers
 {
@@ -75,38 +79,36 @@ namespace Portfolio.Server.Controllers
         // POST: api/Project
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Projects>> PostProjects(Projects projects)
+        public async Task<ActionResult<Projects>> PostProjects(Projects project)
         {
-            //_context.Projects.Add(projects);
-            //await _context.SaveChangesAsync();
-
-            //return CreatedAtAction("GetProjects", new { id = projects.ProjectId }, projects);
-
-            var userProfile = await _context.UserProfiles.FindAsync(projects.UserId);
-            if (userProfile == null)
-            {
-                return BadRequest("UserProfile does not exist.");
-            }
-
-            _context.Projects.Add(projects);
+            var userProfile = await _context.UserProfiles.FindAsync(project.UserId);
+            if (userProfile == null) return BadRequest("UserProfile does not exist.");
+            project.UserProfile = null; // Ensure navigation property is null to avoid issues
+            _context.Projects.Add(project);
             await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetProjects", new { id = projects.ProjectId }, projects);
+            return CreatedAtAction("GetProjects", new { id = project.ProjectId }, new { project.ProjectId });
         }
 
         // DELETE: api/Project/5
         [HttpDelete("{id}")]
+        [Authorize] // Require authentication
         public async Task<IActionResult> DeleteProjects(int id)
         {
-            var projects = await _context.Projects.FindAsync(id);
-            if (projects == null)
+            var project = await _context.Projects.FindAsync(id);
+            if (project == null)
             {
                 return NotFound();
             }
 
-            _context.Projects.Remove(projects);
-            await _context.SaveChangesAsync();
+            // Get the authenticated user's ID from the JWT token
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            if (project.UserId != userId)
+            {
+                return Forbid("You can only delete your own projects.");
+            }
 
+            _context.Projects.Remove(project);
+            await _context.SaveChangesAsync();
             return NoContent();
         }
 

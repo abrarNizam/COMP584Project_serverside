@@ -303,4 +303,13 @@ C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0
 C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\publish\web.config
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\publish\appsettings.json
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\publish\appsettings.Production.json
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\publish\Portfolio.Server.deps.json
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\publish\Portfolio.Server.runtimeconfig.json
+C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\bin\Debug\net8.0\publish\Portfolio.Server.staticwebassets.endpoints.json
 C:\Users\Abrar\source\repos\Portfolio\COMP584Project_serverside\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

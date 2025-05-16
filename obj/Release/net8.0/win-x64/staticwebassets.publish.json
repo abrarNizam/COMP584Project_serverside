@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "S6SvjQC5rnlrgdZzicFeJWD1byF8eS93ZcyqxFeVW8U=",
+  "Source": "Portfolio.Server",
+  "BasePath": "_content/Portfolio.Server",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Abrar\\source\\repos\\Portfolio\\portfolio.client\\portfolio.client.esproj",
+      "Version": 2,
+      "Source": "portfolio.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;Configuration;Platform;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;Configuration;Platform;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
